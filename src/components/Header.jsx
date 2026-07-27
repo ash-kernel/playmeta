@@ -1,21 +1,26 @@
 import React from 'react';
+import config from '../config.json';
 
 const Header = () => {
+  const gitHubLink = config.footer?.links?.find(link => link.label.toLowerCase() === 'github')?.url || 'https://github.com';
+  const logoLink = config.header?.logoLink || '/';
+  const title = config.header?.title || 'Playmeta';
+
   return (
     <header className="w-full relative z-10 pt-6 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="glass-panel flex flex-row items-center justify-between p-4 md:px-6 md:py-4 rounded-2xl bg-dark-900/40 backdrop-blur-md border border-white/5 shadow-2xl">
-        <div className="flex items-center space-x-3">
+        <a href={logoLink} className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
           <div className="w-10 h-10 rounded-xl bg-dark-950/80 border border-white/10 flex items-center justify-center p-1.5 overflow-hidden shadow-inner">
             <img src="/image.png" alt="Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-base sm:text-lg font-bold tracking-tight text-white leading-none">
-            Play<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500">meta</span>
+            {title.substring(0, 4)}<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500">{title.substring(4)}</span>
           </h1>
-        </div>
+        </a>
         
         <div className="flex items-center space-x-4">
           <a 
-            href="https://github.com" 
+            href={gitHubLink} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-slate-400 hover:text-white transition-colors cursor-pointer hover:scale-105 duration-200"
