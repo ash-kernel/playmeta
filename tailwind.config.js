@@ -16,11 +16,11 @@ export default {
           500: '#333333',
         },
         primary: {
-          500: '#3B82F6',
-          400: '#60A5FA',
+          500: '#20A7FE',
+          400: '#54C0FF',
         },
         accent: {
-          500: '#8B5CF6',
+          500: '#00D2FE',
         }
       },
       backgroundImage: {
@@ -32,7 +32,7 @@ export default {
       },
       boxShadow: {
         'glass': '0 0 20px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.05)',
-        'glow': '0 0 20px 0 rgba(59, 130, 246, 0.3)',
+        'glow': '0 0 20px 0 rgba(32, 167, 254, 0.3)',
       },
       animation: {
         'gradient-x': 'gradient-x 15s ease infinite',

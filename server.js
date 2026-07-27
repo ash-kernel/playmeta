@@ -57,16 +57,33 @@ app.get('/api/fetch-metadata', async (req, res) => {
       favicon: $('link[rel="icon"]').attr('href') || $('link[rel="shortcut icon"]').attr('href') || '',
     };
 
+    // Extract all raw meta tags on the page
+    const rawTags = [];
+    $('meta').each((index, element) => {
+      const name = $(element).attr('name') || $(element).attr('property') || $(element).attr('http-equiv') || $(element).attr('charset');
+      const content = $(element).attr('content');
+      if (name || content) {
+        rawTags.push({
+          name: name || '',
+          content: content || '',
+          attribute: $(element).attr('name') ? 'name' : $(element).attr('property') ? 'property' : $(element).attr('http-equiv') ? 'http-equiv' : $(element).attr('charset') ? 'charset' : 'other'
+        });
+      }
+    });
+
     // Make favicon absolute if it's relative
     if (metadata.favicon && !metadata.favicon.startsWith('http')) {
       try {
         metadata.favicon = new URL(metadata.favicon, url).href;
-      } catch (e) {
+      } catch {
         // Ignore invalid URL
       }
     }
 
-    res.json(metadata);
+    res.json({
+      ...metadata,
+      rawTags
+    });
   } catch (error) {
     console.error('Error fetching metadata:', error.message);
     res.status(500).json({ error: 'Failed to fetch metadata or site blocked the request.' });

@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "Metadata Playground",
+    "title": "Playmeta",
     "logoLink": "/"
   },
   "footer": {
@@ -11,7 +11,7 @@
       },
       {
         "label": "GitHub",
-        "url": "https://github.com/example/playmeta"
+        "url": "https://github.com/ash-kernel/playmeta"
       }
     ]
   }

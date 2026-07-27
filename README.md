@@ -1,16 +1,31 @@
-# React + Vite
+<p align="center">
+  <img src="public/image.png" alt="Playmeta Logo" width="128" height="128" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Playmeta
 
-Currently, two official plugins are available:
+A high-fidelity social media metadata playground, validator, and inspector.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Dynamic Mock Previews**: High-fidelity, real-time mock previews for Google Search (Mobile & Desktop), Twitter/X (Summary & Large cards), Facebook, LinkedIn, Discord (Light & Dark themes), Slack (Light & Dark themes), and WhatsApp.
+- **Interactive Live Scraper**: Enter any URL to dynamically extract and validate live HTML metadata.
+- **Visual Validation Score**: Circular health indicators (0-100%) highlighting validation errors, warnings, and passed parameters.
+- **Metadata Tag Inspector**: Scans and lists every `<meta>` header tag. Copy individual values, copy full tags as HTML/JSON, or download the dataset as CSV or JSON.
+- **Interactive Tag Focus**: Click elements directly in the mockup cards to focus, highlight, and jump to the corresponding input field in the editor panel.
+- **Asset Exporter**: Losslessly fetch and download scraped images, icons, and favicons directly with one click.
+- **Export HTML Code Snippets**: Generate refined code blocks and download a fully-packaged `metadata-tags.html` document.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<br />
 
-## Expanding the Oxlint configuration
+<p align="center">
+  <a href="http://playmeta.vercel.app" target="_blank" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/Launch_App-Playmeta-20A7FE?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Launch Playmeta" />
+  </a>
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+<br />
+
+## License
+
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
