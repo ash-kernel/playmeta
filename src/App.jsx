@@ -107,7 +107,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:3001/api/fetch-metadata?url=${encodeURIComponent(targetUrl)}`);
+      const response = await axios.get(`/api/fetch-metadata?url=${encodeURIComponent(targetUrl)}`);
       setMetadata(response.data);
       setInputMode('edit');
     } catch (err) {
