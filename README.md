@@ -19,7 +19,7 @@ A high-fidelity social media metadata playground, validator, and inspector.
 <br />
 
 <p align="center">
-  <a href="http://playmeta.vercel.app" target="_blank" style="text-decoration: none;">
+  <a href="https://playmeta.vercel.app" target="_blank" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/Launch_App-Playmeta-20A7FE?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Launch Playmeta" />
   </a>
 </p>
